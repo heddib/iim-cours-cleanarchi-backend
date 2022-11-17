@@ -32,11 +32,11 @@ describe('List documents for a client', () => {
     const uuidGenerator = new FakeUuidGenerator()
     documentGateway = new InMemoryDocumentGateway(uuidGenerator)
   })
-  it('should not list any document when no one is available', async () => {
+  it('should not list any document when no one is available for this client', async () => {
     const res = await listDocumentsByClientId(clientId, documentGateway)
     expect(res).toEqual([])
   })
-  it('should list all documents when there is available documents', async () => {
+  it('should list all documents when there is available documents for this client', async () => {
     const document1: Document = { id: '1', name: 'Document 1', type: 'pdf', fileName: 'document1.pdf', client_id: 1 }
     const document2: Document = { id: '2', name: 'Document 2', type: 'pdf', fileName: 'document2.pdf', client_id: 1 }
     givenSomeExistingDocuments(document1, document2)
