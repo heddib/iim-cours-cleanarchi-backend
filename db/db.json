@@ -1,0 +1,63 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "firstname": "Heddi",
+      "lastname": "Brahiti"
+    },
+    {
+      "id": "2",
+      "firstname": "Antoine",
+      "lastname": "Puech"
+    },
+    {
+      "id": "3",
+      "firstname": "Vincent",
+      "lastname": "Zhu"
+    }
+  ],
+  "documents": [
+    {
+      "id": "1",
+      "name": "Document 1",
+      "type": "pdf",
+      "fileName": "document1.pdf",
+      "client_id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Document 2",
+      "type": "pdf",
+      "fileName": "document2.pdf",
+      "client_id": "1"
+    },
+    {
+      "id": "3",
+      "name": "Document 3",
+      "type": "pdf",
+      "fileName": "document3.pdf",
+      "client_id": "2"
+    },
+    {
+      "id": "4",
+      "name": "Document 4",
+      "type": "pdf",
+      "fileName": "document4.pdf",
+      "client_id": "2"
+    },
+    {
+      "id": "5",
+      "name": "Document 5",
+      "type": "pdf",
+      "fileName": "document5.pdf",
+      "client_id": "3"
+    },
+    {
+      "id": "6",
+      "name": "Document 6",
+      "type": "pdf",
+      "fileName": "document6.pdf",
+      "client_id": "3"
+    }
+  ]
+}

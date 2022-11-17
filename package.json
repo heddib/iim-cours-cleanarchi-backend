@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "json-server": "json-server -w -p 3008 db/db.json",
+    "dev": "ts-node server.ts",
+    "all": "concurrently \"yarn json-server\" \"yarn dev\"",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/jest": "^29.2.3",
+    "cors": "^2.8.5",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node-fetch": "^2.6.2",
+    "concurrently": "^7.5.0",
+    "express": "^4.18.2",
+    "json-server": "^0.17.1",
+    "nanoid": "3.3.4",
+    "node-fetch": "2.6.7",
+    "ts-node": "^10.9.1"
+  },
+  "volta": {
+    "node": "19.1.0"
+  }
+}
