@@ -56,4 +56,10 @@ export class JsonServerDocumentGateway implements DocumentGateway {
     const json = await res.json();
     return json as Document[];
   }
+
+  async search(query: string): Promise<Document[]> {
+    const res = await fetch(`http://localhost:3008/documents?q=${query}`);
+    const json = await res.json();
+    return json as Document[];
+  }
 }

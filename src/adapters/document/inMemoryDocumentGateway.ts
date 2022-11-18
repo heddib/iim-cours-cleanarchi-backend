@@ -80,4 +80,13 @@ export class InMemoryDocumentGateway implements DocumentGateway {
     const res = this.documents.filter((p) => p.client_id === client_id);
     return res;
   }
+
+  async search(query: string): Promise<Array<Document>> {
+    const res = this.documents.filter((p) =>
+      p.name.toLowerCase().includes(query.toLowerCase()) ||
+      p.type.toLowerCase().includes(query.toLowerCase()) ||
+      p.fileName.toLowerCase().includes(query.toLowerCase())
+    );
+    return res;
+  }
 }
