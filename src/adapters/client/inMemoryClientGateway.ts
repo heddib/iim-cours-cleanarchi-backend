@@ -64,4 +64,11 @@ export class InMemoryClientGateway implements ClientGateway {
     res.lastname = lastname;
     return res;
   }
+
+  async search(query: string): Promise<Array<Client>> {
+    return this.clients.filter((client) =>
+      client.firstname.toLowerCase().includes(query.toLowerCase()) ||
+      client.lastname.toLowerCase().includes(query.toLowerCase())
+    );
+  }
 }

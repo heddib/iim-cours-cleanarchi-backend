@@ -33,4 +33,10 @@ export class JsonServerClientGateway implements ClientGateway {
     })
     return { id, firstname, lastname }
   }
+
+  async search(query: string): Promise<Client[]> {
+    const res = await fetch(`http://localhost:3008/clients?q=${query}`)
+    const json = await res.json()
+    return json as Client[]
+  }
 }
